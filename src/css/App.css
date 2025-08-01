@@ -1,0 +1,113 @@
+.App {
+  text-align: center;
+}
+.topLogo {
+  height: 12vmin;
+  padding-left: 10px;
+}
+.topLogo:hover {
+  transform: scale(1.05);
+}
+.nav-link {
+  margin-left: 50px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 18px;
+}
+.nav-link:hover {
+  transform: scale(1.08);
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #000000 0%, #243b55 100%);
+  padding: 16px 58px;
+  color: #fff;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+  z-index: 1000; 
+}
+
+.featured-section {
+  padding: 30px;
+  text-align: center;
+
+}
+
+
+.footer {
+  background: linear-gradient(90deg, #000000 0%, #243b55 100%);
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column; /*  Ensures footer sections stack */
+  align-items: center;
+  font-size: 14px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+
+}
+.footer a {
+  text-decoration: none;
+  color: #bbb;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+/* Navigation & Social Media */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  padding-bottom: 10px; /*  Adds spacing below */
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.footer-menu li {
+  display: inline;
+}
+
+
+.footer-socials {
+  display: flex;
+  gap: 14px;
+}
+
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.footer-text{
+  color: #888;
+}
+/* 📱 Responsive Design: Adjust for Mobile Screens */
+@media screen and (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      padding: 10px;
+  }
+
+  .nav-link {
+      font-size: 16px;
+      margin-left: 0;
+  }
+}

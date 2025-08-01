@@ -1,0 +1,237 @@
+{
+     "movies_Tvs": [
+        {
+            "id": 1,
+            "title": "Elio",
+            "poster": "https://resizing.flixster.com/IaXbRF4gIPh9jireK_4VCPNfdKc=/200x0/v2/https://resizing.flixster.com/SptwUY0qE9WQGmhLyCVw0gGXvI0=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2JlMTc3ZGEwLTJiNDAtNDljYy1hMTA5LWVmZWU5MWQ5YmY2Ni5qcGc=",
+            "year": 2024,
+            "genre": "Animation, Adventure, Comedy",
+            "User Score": "78%",
+            "overview": "Elio is an upcoming animated film produced by Pixar Animation Studios and directed by Adrian Molina.",
+            "featured": "moviehero",
+            "rent": "$3.99",
+            "purchase": "$14.99",
+            "lposter":"https://cms-assets.webediamovies.pro/cdn-cgi/image/dpr=1,fit=scale-down,gravity=auto,metadata=none,quality=85,width=2000/production/2/5d8392168efaee20812b995f2a8df212.jpg"
+
+        },
+        {
+            "id": 2,
+            "title": "How to Train Your Dragon",
+            "poster": "https://all.web.img.acsta.net/r_500_x/img/8e/d4/8ed4b369e57b3326b6a79db082e50efd.jpg",
+            "overview": "How to Train Your Dragon is an animated film series based on the book series by Cressida Cowell, following the adventures of a young Viking named Hiccup and his dragon Toothless.",
+            "year": 2025,
+            "genre": "Animation, Adventure, Family",
+            "User Score": "80%",
+            "featured": "moviehero",
+            "rent": "$2.99",
+            "purchase": "$12.99",
+            "lposter":"https://cms-assets.webediamovies.pro/cdn-cgi/image/dpr=1,fit=scale-down,gravity=auto,metadata=none,quality=85,width=2000/production/2/335f3de47ff7f2d057af23bd83bb911f.jpg"
+
+
+        },
+        {
+            "id": 3,
+            "title": "Lilo & Stitch",
+            "poster": "https://all.web.img.acsta.net/r_500_x/img/69/0a/690a5f596b404bdf31a05d0dc5d37d5d.jpg",
+            "overview": "Lilo & Stitch: The Series is an American animated television series produced by Walt Disney Television Animation. It is a spin-off of the 2002 film Lilo & Stitch and the first television series in the Lilo & Stitch franchise.",
+            "year": 2025,
+            "genre": "Animation, Comedy, Kids",
+            "User Score": "85%",
+            "featured": "tvhero",
+            "rent": "$7.99",
+            "purchase": "$19.99",
+            "lposter":"https://cms-assets.webediamovies.pro/cdn-cgi/image/dpr=1,fit=scale-down,gravity=auto,metadata=none,quality=85,width=2000/production/2/c56db45c846f3381573c17e893e4aead.jpg"
+
+        },
+        {
+            "id": 4,
+            "title": "Mission: Impossible",
+            "poster": "https://all.web.img.acsta.net/r_500_x/img/3e/ae/3eaec28322e7d333d53e8c0cc2440e8e.jpg",
+            "overview": "Mission: Impossible is an American television series that aired on CBS from 1966 to 1973, and returned for two seasons from 1988 to 1990. The series was created and initially produced by Bruce Geller.",
+            "year": 2025,
+            "genre": "Action, Spy, Thriller",
+            "User Score": "85%",
+            "featured": "tvhero",
+            "rent": "$8.49",
+            "purchase": "$19.99",
+            "lposter":"https://cms-assets.webediamovies.pro/cdn-cgi/image/dpr=1,fit=scale-down,gravity=auto,metadata=none,quality=85,width=2000/production/2/11d8c8c56c958f790ed2dfe6f0c9e6a2.jpg"
+
+        },
+        {
+            "id": 5,
+            "title": "F1 The Movie",
+            "poster": "https://all.web.img.acsta.net/r_500_x/img/49/78/49787f68c115177a429f394692f791c2.jpg",
+            "overview": "F1 The Movie is a documentary film that takes you behind the scenes of the world of Formula 1 racing, showcasing the speed, technology, and drama of the sport.",
+            "year": 2025,
+            "genre": "Action",
+            "User Score": "80%",
+            "featured": "moviehero",
+            "rent": "$3.49",
+            "purchase": "$13.99",
+            "lposter":"https://cms-assets.webediamovies.pro/cdn-cgi/image/dpr=1,fit=scale-down,gravity=auto,metadata=none,quality=85,width=2000/production/2/a466221b558fdd7811cc34ca4408d3f0.jpg"
+
+        },
+        {
+            "id": 6,
+            "title": "Garfield",
+            "poster": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/3HyTfZ9sSCoZPYrYHMffhRVm3Af.jpg",
+            "year": 1988,
+            "genre": "Animation, Comedy, Kids",
+            "User Score": "73%",
+            "overview": "The animated stories of Garfield the cat, Odie the dog, their owner Jon and the trouble they get into. And also Orson the Pig and his adventures on a farm with his fellow farm animals.",
+            "featured": "tv",
+            "rent": "$1.49",
+            "purchase": "$8.99",
+            "lposter": "https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1500x1500/products/84027/83595/garfield_advance_quad_movie_poster_buy_now_at_starstills_2313__60818__82904.1394513379.jpg?c=2"
+        },
+        {
+            "id": 7,
+            "title": "Chespirito: Not on Purpose",
+            "poster": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/gNc8wna9IjIDUxtSeqLrjOjCpRe.jpg",
+            "year": 2025,
+            "genre": "Drama, Comedy",
+            "User Score": "81%",
+            "overview": "Miniseries that follow the life and career of Mexican actor, comedian and producer Roberto Gómez Bolaños, known for being the creator of El Chavo del 8, El Chapulín Colorado and Chespirito.",
+            "featured": "tv",
+            "rent": "$2.29",
+            "purchase": "$11.99",
+            "lposter": "https://img3.hulu.com/user/v3/artwork/96379504-106c-414c-9283-6b7e1065ad26?base_image_bucket_name=image_manager&base_image=13bb352e-4e6d-4063-a21f-4a1547db0879&size=1600x900&format=webp"
+        },
+        {
+            "id": 8,
+            "title": "The Accountant²",
+            "poster": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/kMDUS7VmFhb2coRfVBoGLR8ADBt.jpg",
+            "year": 2025,
+            "genre": "Mystery, Crime, Thriller",
+            "User Score": "72%",
+            "overview": "The Accountant² is a sequel to the 2016 film The Accountant, following the story of Christian Wolff, a math savant with a dangerous side, as he takes on new challenges in the world of high-stakes finance.",
+            "featured": "movie",
+            "rent": "$9.99",
+            "purchase": "$25.99",
+            "lposter": "https://img.megaplextheatres.com/FilmBackdrop/HO00003654"
+        },
+        {
+            "id": 9,
+            "title": "The Ugly Stepsister ",
+            "poster": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/crX9rSg9EohybhkEe8iTQUCe55y.jpg",
+            "year": 2025,
+            "genre": "Horror, Comedy, Fantasy, Drama",
+            "User Score": "72%",
+            "overview": "The Ugly Stepsister is a darkly comedic take on the classic Cinderella story, focusing on the life of the often-overlooked stepsister who has her own story to tell.",
+            "featured": "movie",
+            "rent": "$2.99",
+            "purchase": "$12.99",
+            "lposter": "https://i0.wp.com/cuttothetake.com/wp-content/uploads/2025/06/Title-2.jpg?fit=1200%2C675&ssl=1"
+        },
+        {
+            "id": 10,
+            "title": "Dirty Angels",
+            "poster": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/1y3TG8N8zwwMxqh0qzdyDs3IyCq.jpg",
+            "year": 2024,
+            "genre": "Action, Drama, Thriller, War",
+            "User Score": "63%",
+            "overview": "Dirty Angels is an action-packed crime drama that follows a group of vigilantes who take the law into their own hands to fight against corruption and injustice in their city.",
+            "rent": "$2.49",
+            "purchase": "$10.99",
+            "lposter": "https://i0.wp.com/maactioncinema.com/wp-content/uploads/2025/01/dirtyangels.jpg?fit=686%2C386&ssl=1"
+        },
+        {
+            "id": 11,
+            "title": "Utopia",
+            "poster": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/yef0tY1Nw3BX8PJTfBLieqHj5Hw.jpg",
+            "year": 2024,
+            "genre": "Mystery, Thriller, Action, Science Fiction",
+            "User Score": "54%",
+            "overview": "Utopia is a gripping thriller that follows a group of conspiracy theorists who discover a mysterious graphic novel that predicts global disasters, leading them on a dangerous quest to uncover the truth.",
+            "featured": "tv",
+            "rent": "$1.99",
+            "purchase": "$9.99",
+            "lposter": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc89ms2bAo-Ib9xXBAkHxDk5uL3pdNiRD-pQ&s"
+        },
+        {
+            "id": 12,
+            "title": "Ballerina",
+            "poster": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/mKp4euM5Cv3m2U1Vmby3OGwcD5y.jpg",
+            "year": 2025,
+            "genre": "Action, Thriller, Crime",
+            "User Score": "71%",
+            "overview": "The Last of Us is a post-apocalyptic drama series based on the critically acclaimed video game, following the journey of Joel and Ellie as they navigate a world ravaged by a fungal infection.",
+            "rent": "$2.49",
+            "purchase": "$10.99",
+            "lposter": "https://img.englishcinemakyiv.com/s0k5DGw2adwHCUgu5K7yvCDEkHdZSTwdpQy0pS2cnDA/resize:fill:800:450:1:0/gravity:sm/aHR0cHM6Ly9leHBhdGNpbmVtYXByb2QuYmxvYi5jb3JlLndpbmRvd3MubmV0L2ltYWdlcy9mZGYwNzVmYy0wNGRlLTQ5NDQtYWYzZS0yNDJhNTY3OGZlMDEuanBn.jpg"
+        },
+        {
+            "id": 13,
+            "title": "The Life of Chuck",
+            "poster": "https://resizing.flixster.com/IaXbRF4gIPh9jireK_4VCPNfdKc=/200x0/v2/https://resizing.flixster.com/FKOQEBzqXYHqYQlA5ZskMWdbWpo=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzEzNWYwN2U1LWJmZmYtNGYwMi1iN2EwLTZhN2E2ZTQ3MzM0OC5qcGc=",
+            "year": 2025,
+            "genre": "Drama",
+            "User Score": "85%",
+            "overview": "The Life of Chuck is a drama film that explores the life From childhood to adulthood, Charles Chuck Krantz experiences the wonder of love, the heartbreak of loss, and the multitudes contained in all of us.",
+            "rent": "$2.99",
+            "purchase": "$12.99",
+            "lposter": "https://i.ytimg.com/vi/jlN1Mmj6YNo/hqdefault.jpg"
+        },
+        {
+            "id": 14,
+            "title": "Brokeback Mountain",
+            "poster": "https://i.ebayimg.com/00/s/MTYwMFgxMTMx/z/1dgAAOSw9mJgiM9M/$_57.JPG?set_id=8800005007",
+            "year": 2025,
+            "genre": "Romance, Drama",
+            "User Score": "90%",
+            "overview": "Brokeback Mountain is a romantic drama film that tells the story of two cowboys, Ennis Del Mar and Jack Twist, who develop a complex and forbidden relationship over the years.",
+            "rent": "$3.49",
+            "purchase": "$14.99",
+            "lposter": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQQ3ZgflxC0U3A7uUhp-Z4nHbiig3b48b5G4-qAuo0QqPVVjVgnblqeHu4xwAQuhkSLiYbAnuDRpzz53eC66xw3ZtcS3J9ZfzdBUgBTpUtEmRNDN0gOuh-M9A"
+        },
+        {
+            "id": 15,
+            "title": "Thunderbolts*",
+            "poster": "https://resizing.flixster.com/IaXbRF4gIPh9jireK_4VCPNfdKc=/200x0/v2/https://resizing.flixster.com/9GzvfSWe1iPtRk_vtcfpHIQGyCI=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2U2MzgyZDIyLWNjZmYtNGU5NS05ZjczLTYyZGE1ZGIyYzIxNC5qcGc=",
+            "year": 2023,
+            "genre": "Action, Adventure",
+            "User Score": "95%",
+            "overview": "Thunderbolts is an upcoming superhero film in the Marvel Cinematic Universe, featuring a team of anti-heroes and villains who are brought together for a common cause.",
+            "rent": "$.899",
+            "purchase": "$22.99",
+            "lposter": "https://thedisinsider.com/wp-content/uploads/2024/09/GYKc6QAWkAA8dbL-e1727112958192.jpeg"
+        },
+        {
+            "id": 16,
+            "title": "The Equalizer 3",
+            "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTZprIrCfYQ1z4BDM3D0zSzx6QP-8Pl5LmFA&s",
+            "year": 2023,
+            "genre": "Action, Thriller",
+            "User Score": "88%",
+            "overview": "Robert McCall vows to stop an Italian crime syndicate from brutalizing and extorting the residents of a small coastal town that has won his heart.",
+            "rent": "$2.99",
+            "purchase": "$12.99",
+            "lposter": "https://occ-0-912-90.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABU5t9ThReUyOUH0Re_ow0_IIcQa5QDSprUnuHXeADqlyGhdCkRhYsRNa1MwB62Kc4hMJ3yRZEMVTYcWoAKJfIQwDil7OIyEmSNFxIRkdE1FJq50xf1aOPxTjn-zzuphhxPhrkhtri6RdaLtZddu9SY8V9mp7znr67A-NqWMoiBkI.jpg?r=653"
+        },
+        {
+            "id": 17,
+            "title": "Back in Action",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMWQ4YWYxYTAtZTlhNC00Nzc3LWE3OWUtZjY5MThlNWNiYTBiXkEyXkFqcGc@._V1_QL75_UX190_CR0,0,190,281_.jpg",
+            "year": 2025,
+            "genre": "Action",
+            "User Score": "82%",
+            "overview": "Fifteen years after vanishing from the CIA to start a family, elite spies Matt and Emily jump back into the world of espionage when their cover is blown.",
+            "rent": "$3.49",
+            "purchase": "$14.99",
+            "lposter": "https://occ-0-912-90.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABbyOZXrLNWSc-K6c8YzwYOpHMKM8gE9lDCypdcdIM89Lbr71ztZX0XsH00X4JnNtVMjbH6TqB3opD80O5E9W8FwjfU31VOXNx13Ysfu413vKDRxGqZRwHeB_O_mSGNMDr33c.jpg?r=eca"
+        },
+        {
+            "id": 18,
+            "title": "The Electric State",
+            "poster": "https://i.ebayimg.com/images/g/XA4AAOSw4G5nr3U9/s-l1200.jpg",
+            "year": 2023,
+            "genre": "Science Fiction, Adventure",
+            "User Score": "78%",
+            "overview": "An orphaned teen hits the road with a mysterious robot to find her long-lost brother, teaming up with a smuggler and his wisecracking sidekick.",
+            "rent": "$2.99",
+            "purchase": "$12.99",
+            "lposter": "https://thefutureoftheforce.com/wp-content/uploads/2025/03/The-Electric-State-Review-2025-Netflix.jpg"
+        }
+    ]
+
+}
