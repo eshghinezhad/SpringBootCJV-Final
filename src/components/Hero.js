@@ -6,6 +6,8 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { API_BASE_URL } from '../config/api';
+
 
 
 
@@ -13,7 +15,7 @@ const Hero = () => {
     const [movies, setMovies] = useState([]);
     
     useEffect(() => {
-      fetch(`${process.env.REACT_APP_SERVER_URL}/movies_Tvs`)
+      fetch(`${API_BASE_URL}/movies_Tvs`)
         .then(res => res.json())
         .then(data => {
           const hero = data.filter(item => item.featured && item.featured.includes("hero"));

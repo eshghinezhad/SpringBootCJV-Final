@@ -3,13 +3,14 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import {Grid , Card, CardMedia, CardContent, Typography} from "@mui/material";
 import {Link} from "react-router-dom";
+import { API_BASE_URL } from '../config/api';
 
 function MoviesList() {
 
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-      fetch(`${process.env.REACT_APP_SERVER_URL}/movies_Tvs`)
+        fetch(`${API_BASE_URL}/movies_Tvs`)
         .then(res => res.json())
         .then(data => setMovies(data))
         .catch(error => console.error("Error fetching movies:", error));

@@ -2,6 +2,8 @@ import React, {useEffect,useState} from "react";
 import { Grid,Card, CardMedia, CardContent, Typography } from "@mui/material";
 import { Link } from 'react-router-dom';
 import '../css/App.css';
+import { API_BASE_URL } from '../config/api';
+
 
 
 
@@ -10,7 +12,8 @@ const FeaturedTV = () => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-      fetch(`${process.env.REACT_APP_SERVER_URL}/movies_Tvs`)
+      console.log('Server URL:', API_BASE_URL);
+      fetch(`${API_BASE_URL}/movies_Tvs`)
         .then(res => res.json())
         .then(data => {
           const tvsOnly = data.filter(item => item.featured && item.featured.includes("tv"));

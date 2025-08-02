@@ -3,13 +3,14 @@ import { useParams } from "react-router-dom";
 import { Typography, Card, CardMedia, Button, Box } from "@mui/material";
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { API_BASE_URL } from '../config/api';
 
 function MovieDetails() {
     const { id } = useParams();
     const [movie, setMovie] = useState();
 
     useEffect(() => {
-      fetch(`${process.env.REACT_APP_SERVER_URL}/movies_Tvs/${id}`)
+      fetch(`${API_BASE_URL}/movies_Tvs/${id}`)
         .then(res => res.json())
         .then(data => setMovie(data))
         .catch(error => console.error("Error fetching movie:", error));
