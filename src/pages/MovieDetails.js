@@ -10,14 +10,25 @@ function MovieDetails() {
     const [movie, setMovie] = useState();
 
     useEffect(() => {
-      fetch(`${API_BASE_URL}/movies_Tvs/${id}`)
-        .then(res => res.json())
-        .then(data => setMovie(data))
-        .catch(error => console.error("Error fetching movie:", error));
+      // fetch(`${API_BASE_URL}/movies_Tvs/${id}`)
+      const fetchMovie = async () => {
+          try {
+              const response = await fetch(`${API_BASE_URL}/show/${id}`);
+              if (!response.ok) {
+                  throw new Error('Failed to fetch movie');
+              }
+              const data = await response.json();
+              setMovie(data.body[0]);
+          } catch (error) {
+              console.error('Error fetching movie:', error);
+          }
+      };
+    
+        fetchMovie();
     }, [id]);
 
     if (!movie) {
-      return <Typography variant="h6" align="center">Movie/TVShow Not Found</Typography>;
+      return <Typography variant="h3" align="center">Movie/TVShow Not Found</Typography>;
     }
 
   return (

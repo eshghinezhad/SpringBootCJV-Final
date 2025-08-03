@@ -10,12 +10,18 @@ function MoviesList() {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        fetch(`${API_BASE_URL}/movies_Tvs`)
-        .then(res => res.json())
-        .then(data => setMovies(data))
-        .catch(error => console.error("Error fetching movies:", error));
+        const fetchMovies = async () => {
+            try {
+                // const response = await fetch(`${API_BASE_URL}/movies_Tvs`) // JSON Server - FakeAPI
+                const response = await fetch(`${API_BASE_URL}/show`);
+                const data = await response.json();
+                setMovies(data);
+            } catch (error) {
+                console.error('Error fetching featured movies:', error);
+            }
+        };
+        fetchMovies();
     }, []);
-
 
     return (
     <>        

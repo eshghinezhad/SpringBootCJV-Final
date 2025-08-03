@@ -12,20 +12,23 @@ const FeaturedTV = () => {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-      console.log('Server URL:', API_BASE_URL);
-      // fetch(`${API_BASE_URL}/movies_Tvs`) // JSON Server - FakeAPI
-      fetch(`${API_BASE_URL}/show/featured?type=tv`)
-        .then(res => res.json())
-        .then(data => {
-          // const tvsOnly = data.filter(item => item.featured && item.featured.includes("tv")); // JSON Server - FakeAPI
-          setMovies(data.body);
-        })
-        .catch(error => console.error("Error fetching movies:", error));
+      const fetchMovies = async () => {
+          try {
+              // const response = await fetch(`${API_BASE_URL}/movies_Tvs`) // JSON Server - FakeAPI
+              const response = await fetch(`${API_BASE_URL}/show/find?featured=tv`);
+              const data = await response.json();
+              // const tvsOnly = data.filter(item => item.featured && item.featured.includes("tv")); // JSON Server - FakeAPI
+              setMovies(data);
+          } catch (error) {
+              console.error('Error fetching featured movies:', error);
+          }
+      };
+      fetchMovies();
     }, []);
-    if (!movies || movies.length === 0) {
-      return <Typography variant="h6" align="center">Sorry! <br />  No movies or TV shows available at the moment</Typography>;
-    }
 
+    if (!movies || movies.length === 0) {
+      return <Typography variant="h6" align="center">Sorry! <br />  Movies and TVShows are loading...</Typography>;
+    }
 
     return (
       <div className="featured-section">

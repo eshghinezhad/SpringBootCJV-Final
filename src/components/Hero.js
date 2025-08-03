@@ -13,18 +13,21 @@ import { API_BASE_URL } from '../config/api';
 
 const Hero = () => {
     const [movies, setMovies] = useState([]);
-    
-    useEffect(() => {
-      // fetch(`${API_BASE_URL}/movies_Tvs`) // JSON Server - FakeAPI
-      fetch(`${API_BASE_URL}/show/featured?type=hero`)
 
-        .then(res => res.json())
-        .then(data => {
-          // const hero = data.filter(item => item.featured && item.featured.includes("hero")); // JSON Server - FakeAPI
-          setMovies(data.body);
-        })
-        .catch(error => console.error("Error fetching movies:", error));
-    }, []);
+      useEffect(() => {
+        const fetchMovies = async () => {
+            try {
+              // const response = await fetch(`${API_BASE_URL}/movies_Tvs`) // JSON Server - FakeAPI
+              const response = await fetch(`${API_BASE_URL}/show/find?featured=hero`);
+              const data = await response.json();
+              // const hero = data.filter(item => item.featured && item.featured.includes("hero")); // JSON Server - FakeAPI
+              setMovies(data);
+            } catch (error) {
+                console.error('Error fetching featured movies:', error);
+            }
+        };
+        fetchMovies();
+      }, []);
 
   return (
     <Box 
