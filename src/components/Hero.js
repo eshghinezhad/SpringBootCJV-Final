@@ -15,11 +15,13 @@ const Hero = () => {
     const [movies, setMovies] = useState([]);
     
     useEffect(() => {
-      fetch(`${API_BASE_URL}/movies_Tvs`)
+      // fetch(`${API_BASE_URL}/movies_Tvs`) // JSON Server - FakeAPI
+      fetch(`${API_BASE_URL}/show/featured?type=hero`)
+
         .then(res => res.json())
         .then(data => {
-          const hero = data.filter(item => item.featured && item.featured.includes("hero"));
-          setMovies(hero);
+          // const hero = data.filter(item => item.featured && item.featured.includes("hero")); // JSON Server - FakeAPI
+          setMovies(data.body);
         })
         .catch(error => console.error("Error fetching movies:", error));
     }, []);

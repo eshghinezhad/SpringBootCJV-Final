@@ -13,11 +13,12 @@ const FeaturedTV = () => {
 
     useEffect(() => {
       console.log('Server URL:', API_BASE_URL);
-      fetch(`${API_BASE_URL}/movies_Tvs`)
+      // fetch(`${API_BASE_URL}/movies_Tvs`) // JSON Server - FakeAPI
+      fetch(`${API_BASE_URL}/show/featured?type=tv`)
         .then(res => res.json())
         .then(data => {
-          const tvsOnly = data.filter(item => item.featured && item.featured.includes("tv"));
-          setMovies(tvsOnly);
+          // const tvsOnly = data.filter(item => item.featured && item.featured.includes("tv")); // JSON Server - FakeAPI
+          setMovies(data.body);
         })
         .catch(error => console.error("Error fetching movies:", error));
     }, []);

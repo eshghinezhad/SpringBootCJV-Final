@@ -8,12 +8,12 @@ import { API_BASE_URL } from '../config/api';
 const FeaturedMovies = () => {
     const [movies, setMovies] = useState([]);
     useEffect(() => {
-      console.log('Server URL:', API_BASE_URL);
-      fetch(`${API_BASE_URL}/movies_Tvs`)
+      // fetch(`${API_BASE_URL}/movies_Tvs`) // JSON Server - FakeAPI
+      fetch(`${API_BASE_URL}/show/featured?type=movie`)
         .then(res => res.json())
         .then(data => {  
-          const moviesOnly = data.filter(item => item.featured && item.featured.includes("movie"));
-          setMovies(moviesOnly);
+          // const moviesOnly = data.filter(item => item.featured && item.featured.includes("movie"));  // JSON Server - FakeAPI
+          setMovies(data.body);
         })
         .catch(error => console.error("Error fetching movies:", error));
     }, []);
