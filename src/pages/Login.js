@@ -9,34 +9,42 @@ import { API_BASE_URL } from '../config/api';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch(`${API_BASE_URL}/auth/login`, {
-        method:'POST',
-          body:JSON.stringify({ email, password }),
-          headers: {
-              'Content-Type': 'application/json'
-          }
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.message || 'Failed to log in');
-      }
-
-      const data = await response.json();
-      console.log('Login successful:', data);
-      navigate('/user');
-    } catch (error) {
-      console.error('Error logging in:', error);
-      setErrorMessage(error.message || 'An error occurred during login.');
-    }
-  };
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        setError('');
+        setLoading(true);
+        
+        try {
+            const response = await fetch(`${API_BASE_URL}/auth/login`, {
+                method: 'POST',
+                body: JSON.stringify({ email, password }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const serverRes = await response.json();
+            
+            if (response.ok) {
+                const user = serverRes.body[0];
+                sessionStorage.setItem('user', JSON.stringify({ id: user.id }));
+                navigate('/user');
+            } else {
+                setError(serverRes.message || 'Login failed');
+            }
+        } catch (error) {
+            console.error('Login error:', error);
+            setError('Network error. Please check your connection and try again.');
+        } finally {
+            setLoading(false);
+        }
+        
+        console.log({ email, password });
+    };
 
   return (
     <div style={{
@@ -58,11 +66,13 @@ function Login() {
         <Typography variant="h4" gutterBottom>
           Login
         </Typography>
-        {errorMessage && (
-          <Typography variant="body2" color="error" gutterBottom>
-            {errorMessage}
+
+        {error && (
+          <Typography color="error" sx={{ mb: 2 }}>
+            {error}
           </Typography>
         )}
+
         <form onSubmit={handleSubmit} style={{ width: '100%', maxWidth: '400px' }}>
           <TextField
             required
@@ -72,6 +82,7 @@ function Login() {
             margin="normal"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            disabled={loading}
           />
           <TextField
             required
@@ -82,6 +93,7 @@ function Login() {
             margin="normal"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            disabled={loading}
           />
           <Button
             type="submit"
@@ -89,8 +101,9 @@ function Login() {
             color="primary"
             fullWidth
             sx={{ marginTop: '20px' }}
+            disabled={loading}
           >
-            Login
+            {loading ? 'Logging in...' : 'Login'}
           </Button>
           <Box component={Link} to="/signup">
             <Button
@@ -98,6 +111,7 @@ function Login() {
               color="primary"
               fullWidth
               sx={{ marginTop: '10px' }}
+              disabled={loading}
             >
               Sign Up
             </Button>

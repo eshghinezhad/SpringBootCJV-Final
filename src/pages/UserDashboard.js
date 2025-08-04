@@ -5,32 +5,60 @@ import Footer from "../components/Footer";
 import { API_BASE_URL } from "../config/api";
 
 function UserDashboard() {
-    const [userInfo, setUserInfo] = useState(null);
+    const [user, setUser] = useState();
+    const [error, setError] = useState('');
 
     useEffect(() => {
-        const fetchUserInfo = async () => {
+        const fetchData = async () => {
             try {
-                        const id = JSON.parse(sessionStorage.user).id;
-
-                const response = await fetch(`${API_BASE_URL}/user/${id}`); // Replace with actual endpoint
-                if (!response.ok) {
-                    throw new Error("Failed to fetch user information");
+                const userData = JSON.parse(sessionStorage.getItem('user'));
+                if (!userData || !userData.id) {
+                    setError('No user session found. Please login again.');
+                    return;
                 }
-                const data = await response.json();
-                setUserInfo(data);
+
+                const response = await fetch(`${API_BASE_URL}/user/${userData.id}`);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const newData = await response.json();
+                setUser(newData.body[0]);
             } catch (error) {
-                console.error("Error fetching user information:", error);
+                console.error('Error fetching user data:', error);
+                setError('Failed to load user information. Please try again.');
             }
         };
-
-        fetchUserInfo();
+        
+        fetchData();
     }, []);
 
-    if (!userInfo) {
+    if (error) {
         return (
-            <Typography variant="h6" align="center">
-                Loading user information...
-            </Typography>
+            <div style={{ display: "grid", gridTemplateRows: "auto 1fr auto", minHeight: "100vh" }}>
+                <Header />
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#f5f5f5" }}>
+                    <Typography variant="h6" color="error" align="center">
+                        {error}
+                    </Typography>
+                </Box>
+                <Footer />
+            </div>
+        );
+    }
+
+    if (!user) {
+        return (
+            <div style={{ display: "grid", gridTemplateRows: "auto 1fr auto", minHeight: "100vh" }}>
+                <Header />
+                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#f5f5f5" }}>
+                    <Typography variant="h6" align="center">
+                        No user information found.
+                    </Typography>
+                </Box>
+                <Footer />
+            </div>
         );
     }
 
@@ -53,9 +81,9 @@ function UserDashboard() {
                 <Card sx={{ maxWidth: 400, width: "100%", margin: "20px auto" }}>
                     <CardContent>
                         <Typography variant="h6">Personal Information</Typography>
-                        <Typography variant="body1">Name: {userInfo.name}</Typography>
-                        <Typography variant="body1">Email: {userInfo.email}</Typography>
-                        <Typography variant="body1">Joined: {new Date(userInfo.joined).toLocaleDateString()}</Typography>
+                        <Typography variant="body1">Name: {user.firstName} {user.lastName}</Typography>
+                        <Typography variant="body1">Email: {user.email}</Typography>
+                        
                     </CardContent>
                 </Card>
             </Box>
