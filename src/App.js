@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import MovieDetails from './pages/MovieDetails'; 
 import MoviesList from './pages/MoviesList';
+import UserDashboard from './pages/UserDashboard';
 
 
 
@@ -25,7 +26,8 @@ const App = () => {
                 <Route path="/signUp" element={<SignUp />} />
                 <Route path="/movie/:id" element={<MovieDetails />} />
                 <Route path="/moviesList" element={<MoviesList />} />
-                <Route path="*" element={<Home />} /> 
+                <Route path="/user" element={<UserDashboard />} />
+                <Route path="*" element={<Home />} />
         </Routes>
       </Router>
 

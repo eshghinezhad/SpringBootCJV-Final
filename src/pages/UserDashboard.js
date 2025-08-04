@@ -10,7 +10,9 @@ function UserDashboard() {
     useEffect(() => {
         const fetchUserInfo = async () => {
             try {
-                const response = await fetch(`${API_BASE_URL}/user/info`); // Replace with actual endpoint
+                        const id = JSON.parse(sessionStorage.user).id;
+
+                const response = await fetch(`${API_BASE_URL}/user/${id}`); // Replace with actual endpoint
                 if (!response.ok) {
                     throw new Error("Failed to fetch user information");
                 }

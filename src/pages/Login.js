@@ -15,18 +15,13 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const userCredentials = {
-      email,
-      password,
-    };
-
     try {
       const response = await fetch(`${API_BASE_URL}/auth/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userCredentials),
+        method:'POST',
+          body:JSON.stringify({ email, password }),
+          headers: {
+              'Content-Type': 'application/json'
+          }
       });
 
       if (!response.ok) {
@@ -36,7 +31,7 @@ function Login() {
 
       const data = await response.json();
       console.log('Login successful:', data);
-      navigate('/UserDashboard');
+      navigate('/user');
     } catch (error) {
       console.error('Error logging in:', error);
       setErrorMessage(error.message || 'An error occurred during login.');
