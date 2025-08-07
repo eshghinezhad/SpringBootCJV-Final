@@ -40,7 +40,7 @@ function Navigation() {
         
         {isLoggedIn ? (
           <>
-            <Link to="/user" className="nav-link">Dashboard</Link>
+            <Link to="/userDashboard" className="nav-link">Dashboard</Link>
             <Button 
               onClick={handleLogout}
               sx={{ 

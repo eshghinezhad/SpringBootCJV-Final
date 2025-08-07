@@ -32,7 +32,7 @@ function Login() {
             if (response.ok) {
                 const user = serverRes.body[0];
                 sessionStorage.setItem('user', JSON.stringify({ id: user.id }));
-                navigate('/user');
+                navigate('/userDashboard');
             } else {
                 setError(serverRes.message || 'Login failed');
             }

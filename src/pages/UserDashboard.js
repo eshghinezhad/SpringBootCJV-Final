@@ -13,7 +13,7 @@ function UserDashboard() {
             try {
                 const userData = JSON.parse(sessionStorage.getItem('user'));
                 if (!userData || !userData.id) {
-                    setError('No user session found. Please login again.');
+                    setError('User not authenticated. Please login again.');
                     return;
                 }
 
