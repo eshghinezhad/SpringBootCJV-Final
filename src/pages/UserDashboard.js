@@ -54,7 +54,7 @@ function UserDashboard() {
                 <Header />
                 <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: "#f5f5f5" }}>
                     <Typography variant="h6" align="center">
-                        No user information found.
+                        User information not found.
                     </Typography>
                 </Box>
                 <Footer />
@@ -75,15 +75,16 @@ function UserDashboard() {
                     padding: "20px",
                 }}
             >
-                <Typography variant="h4" gutterBottom>
-                    User Dashboard
+                <Typography variant="h3" margin="40px auto" >
+                    User Profile
                 </Typography>
                 <Card sx={{ maxWidth: 400, width: "100%", margin: "20px auto" }}>
                     <CardContent>
-                        <Typography variant="h6">Personal Information</Typography>
-                        <Typography variant="body1">Name: {user.firstName} {user.lastName}</Typography>
-                        <Typography variant="body1">Email: {user.email}</Typography>
-                        
+                        <Typography variant="h4" >Personal Information</Typography>
+                        <hr style={{ width: '100%', maxWidth: 400, margin: '10px 0' }} />
+                        <Typography variant="h6">First Name: {user.firstName}</Typography>
+                        <Typography variant="h6">Last Name: {user.lastName}</Typography>
+                        <Typography variant="h6">Email: {user.email}</Typography>
                     </CardContent>
                 </Card>
             </Box>
