@@ -1,27 +1,50 @@
 import React, {useState, useEffect} from 'react'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import {Grid , Card, CardMedia, CardContent, Typography} from "@mui/material";
+import {Grid , Card, CardMedia, CardContent, Typography, TextField, Button, Box} from "@mui/material";
 import {Link} from "react-router-dom";
 import { API_BASE_URL } from '../config/api';
 
 function MoviesList() {
 
     const [movies, setMovies] = useState([]);
+    const [setsearchTitle, setsetsearchTitle] = useState('');
 
     useEffect(() => {
-        const fetchMovies = async () => {
-            try {
-                // const response = await fetch(`${API_BASE_URL}/movies_Tvs`) // JSON Server - FakeAPI
-                const response = await fetch(`${API_BASE_URL}/show`);
+        fetchAllMovies();
+    }, []);
+
+    const fetchAllMovies = async () => {
+        try {
+            // const response = await fetch(`${API_BASE_URL}/movies_Tvs`) // JSON Server - FakeAPI
+            const response = await fetch(`${API_BASE_URL}/show`);
+            const data = await response.json();
+            setMovies(data);
+        } catch (error) {
+            console.error('Error fetching movies:', error);
+        }
+    };
+
+    const handleSearch = async () => {
+        if (!setsearchTitle.trim()) {
+            fetchAllMovies();
+            return;
+        }
+
+        try {
+            const response = await fetch(`${API_BASE_URL}/show/search?title=${setsearchTitle}`);
+            if (response.ok) {
                 const data = await response.json();
                 setMovies(data);
-            } catch (error) {
-                console.error('Error fetching featured movies:', error);
+            } else {
+                console.error('Search failed');
+                setMovies([]);
             }
-        };
-        fetchMovies();
-    }, []);
+        } catch (error) {
+            console.error('Error searching movies:', error);
+            setMovies([]);
+        }
+    };
 
     return (
     <>        
@@ -31,7 +54,24 @@ function MoviesList() {
              Movies & TV Shows Listing
             </Typography>
 
-            {/* Grid Layout */}
+            <Box sx={{ mb: 3, display: 'flex', justifyContent: 'center', gap: 2 }}>
+                <TextField
+                    label="Search Title..."
+                    variant="outlined"
+                    value={setsearchTitle}
+                    onChange={(e) => setsetsearchTitle(e.target.value)}
+                    sx={{ width: '300px' }}
+                />
+                <Button 
+                    variant="contained" 
+                    onClick={handleSearch}
+                    sx={{ height: '56px' }}
+                >
+                    Search
+                </Button>
+            </Box>
+
+            
             <div className="featured-section">
             <Grid container spacing={2} justifyContent="center">
             {movies.map((movie) => (
