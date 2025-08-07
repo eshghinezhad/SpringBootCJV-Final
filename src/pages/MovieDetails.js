@@ -48,8 +48,6 @@ function MovieDetails() {
             color: "white",
             alignItems: "center",
             justifyContent: "center",
-            
-            // p: { xs: 0.5, sm: 1, md: 2},
           }}
         >
           <Box

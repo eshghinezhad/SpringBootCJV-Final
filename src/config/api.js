@@ -1,6 +1,5 @@
 // API Configuration
 const getApiUrl = () => {
-  // Manual toggle - change this to switch between local and deployed
   const BackendApi = false; // Set to true to use  JSON Server- Fack API
 
   if (BackendApi) {

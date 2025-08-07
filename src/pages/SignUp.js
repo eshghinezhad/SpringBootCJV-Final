@@ -66,7 +66,6 @@ function SignUp() {
                 const errorMessage = "Email address is already exist.";
                 return errorMessage; 
             } else if (!response.ok) {
-                // Handle other non-OK responses
                 const errorData = await response.json();
                 throw new Error(errorData.message || 'Failed to check email');
             }
